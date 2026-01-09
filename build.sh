@@ -7,8 +7,8 @@ rm -rf out
 rm -rf pmbootstrap
 
 # Git identity
-git config --global user.email "example@example.com"
-git config --global user.name "Nonta72"
+git config --global user.email "bmcillionline@hotmail.com"
+git config --global user.name "bmcillionline"
 
 # Replace placeholders in .cfg file
 find . -type f -name "*.cfg" -exec sed -i "s|HOME|$(echo $HOME)|;s|NPROC|$(nproc)|" {} +
