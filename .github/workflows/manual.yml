@@ -7,7 +7,7 @@ env:
   KERNEL_BRANCH: fekz115/spacewar-6.17-rebase
 
 jobs:
-  build-image:
+  build-image: 
     strategy:
       matrix:
         version: ["default"]
@@ -19,8 +19,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config --global user.email "veythrix@gmail.com"
-          git config --global user.name "Veythrix"
+          git config --global user.email "bmcillionline@hotmail.com "
+          git config --global user.name "bmcillionline"
 
       - name: Substitute placeholders in configs
         run: |
@@ -74,7 +74,7 @@ jobs:
       - name: Build nothing-spacewar
         run: |
           cp nothing-spacewar.cfg ~/.config/pmbootstrap.cfg
-          pmbootstrap install --password 9229
+          pmbootstrap install --password 0923
           pmbootstrap export
           cp /tmp/postmarketOS-export/boot.img out/boot-nothing-spacewar.img
           cp /tmp/postmarketOS-export/nothing-spacewar.img out/rootfs-nothing-spacewar.img
