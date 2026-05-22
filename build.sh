@@ -30,8 +30,8 @@ if [ ! -d $dir/pmbootstrap ]; then
   git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap $dir/pmbootstrap 
 fi
 if [ ! -d $dir/pmaports ]; then
-  git config --global user.email "veythrix@gmail.com"
-  git config --global user.name "Veythrix"
+  git config --global user.email "bmcillionline@hotmail.com"
+  git config --global user.name "panda"
   git clone https://gitlab.postmarketos.org/postmarketOS/pmaports.git $dir/pmaports
   cd $dir/pmaports
   git remote add mainlining https://github.com/mainlining/pmaports
@@ -44,7 +44,7 @@ echo """
 [pmbootstrap]
 aports = $dir/pmaports
 device = nothing-spacewar
-ui = phosh
+ui = xfce
 systemd = never
 """ | tee ~/.config/pmbootstrap_v3.cfg
 
@@ -55,7 +55,7 @@ source $dir/pmbootstrap/helpers/envkernel.sh
 make defconfig sc7280.config
 make -j$(nproc)
 pmbootstrap build linux-postmarketos-qcom-sc7280 --force --envkernel
-pmbootstrap install --password 7777 
+pmbootstrap install --password 0923
 if [ -n "$GITHUB_WORKSPACE" ]; then
   pmbootstrap shutdown
 fi
